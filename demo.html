@@ -1,0 +1,39 @@
+<!doctype>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="src/mf-loader.js"></script>
+	<link rel="stylesheet" type="text/css" href="src/mf-loader.css">
+
+	<style>
+	body{ font-family:arial; }
+	</style>
+	
+</head>
+<body>
+
+	<h1>MF Loader demo</h1>
+	
+	<h2>Inline script</h2>
+	<input type="button" value="Button" style="height: 20px; display:block;"
+		onclick="var loader = new MFLoader(this); setTimeout(loader.stop, 1000);">
+	<hr/>
+	
+	<h2>On a anchor</h2>
+	<a href="" id="anchor" style="display:inline-block;"><img src="http://lorempixel.com/200/100/"></a>
+
+	<script>
+		$('#anchor').click(function(){
+			var loader = new MFLoader(this);
+			setTimeout(function(){
+				loader.stop();
+			}, 10000);
+			return false;
+		});
+	</script>
+
+</body>
+</html>

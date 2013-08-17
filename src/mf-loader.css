@@ -1,0 +1,6 @@
+.mf-loader {
+	  width: 16px;
+	  height: 16px;
+	  background: url(ajax-loader.gif) no-repeat center center;
+	  position: absolute;
+}
